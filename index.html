@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!-- MapBox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Slider -->
+
+
+    <title>BornGreen</title>
+</head>
+<body>
+    <div class="wrapper">
+       <!-- Header -->
+        <div class="head">BornGreen</div>
+        <img src="img/hamburger.png" alt="menu" class="menu">
+
+        <!-- Cinemagraph -->
+        <img src="img/storke-delivery.gif" alt="stork" class="cinemagraph">
+
+        <!-- Gradient -->
+        <div class="gradient">
+        <h2 class="story">Our <b>Story</b></h2>
+        <p class="story2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error optio velit voluptate, quo, temporibus soluta!</p>
+        <h2 class="mission">Our <b>Mission</b></h2>
+        <p class="mission2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt odio, harum qui incidunt laboriosam.</p>
+        </div>
+
+        <!-- How it works -->
+        <h1 class="how">How it works?</h1>
+        <div class="howit">
+        <img src="img/step1.png" alt="step1" class="step1">
+        <p class="caption" id="caption1">The order is placed</p>
+        <img src="img/step2.png" alt="step2" class="step2">
+        <p class="caption" id="caption2">The order is placed</p>
+        <img src="img/step3.png" alt="step3" class="step3">
+        <p class="caption" id="caption3">The order is placed</p>
+        <img src="img/step4.png" alt="step4" class="step4">
+        <p class="caption" id="caption4">The order is placed</p>
+        </div>
+
+        <!-- Stats -->
+            <img src="img/trees.jpg" alt="trees_bg" class="statBG">
+            <p class="stat1"><b>80</b> <br> babies born</p>
+            <p class="stat2"><b>80</b> <br> babies born</p>
+            <p class="stat3"><b>80</b> <br> babies born</p>
+
+        <!-- MapBox -->
+        <div id="buttons"><b>Where to buy | Where to plant</b></div>
+        <div id="map"></div>
+
+        <!-- Our Team -->
+        <h1 class="team">Our <b>Team</b></h1>
+        <p  class="team2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi iste aspernatur cum sit provident.</p>
+
+        <!-- Our Partners -->
+        <h1 class="partners">Our <b>Partners</b></h1>
+        <div class="slideshow">
+        <div class="images">
+        </div>
+        </div>
+
+        <!-- Contact -->
+
+
+    </div>
+
+
+
+
+
+
+
+            <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2FtaWxtaWxjIiwiYSI6ImNqdGd3a3A4dzBvc28zeXJ1OWQ3d2xzNnkifQ.P0LS7r_BHYy6wtPLfADikA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/kamilmilc/cjw4iijds054s1cpjuajwfstk',
+        center: [10.202566, 56.151413],
+        zoom: 11.6
+        });
+
+
+        var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [10.200915, 56.152449]
+    },
+    properties: {
+      title: 'Musikhuset',
+      description: 'Aarhus, Denmark'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [10.197534, 56.137153]
+    },
+    properties: {
+      title: 'Tivoli',
+      description: 'Aarhus, Denmark'
+    }
+  }]
+};
+
+                // add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+    .addTo(map);
+});
+
+
+        </script>
+</body>
+</html>
