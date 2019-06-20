@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,46 +14,64 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
-    <!-- Slider -->
-
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <title>BornGreen</title>
+
+    <!-- SEO improvements -->
+    <meta name="description" content="BornGreen is a social entrepreneurship start-up aiming to plant a tree for every new-born in the local area where the child and family can visit it. A BornGreen tree is more than a gift because half of the profit is invested in guiding young kids towards becoming a sustainable citizen.">
+    <meta name="robots" content="index, follow"> 
 </head>
+
 <body>
     <div class="wrapper">
-       <!-- Header -->
-        <div class="head">BornGreen</div>
-        <img src="img/hamburger.png" alt="menu" class="menu">
+        <!-- Header -->
+        <img src="img/Asset%202.svg" class="head">
+        <img src="img/hamburger.png" alt="Hamburger menu icon" class="menu" onclick="openMenu()">
+
+        <!-- Navigation -->
+        <nav id="navi">
+            <li><a href="#gradientt">Our mission</a></li>
+            <li><a href="#missionn">How it works?</a></li>
+            <li><a href="#buttons">Where to buy</a></li>
+            <li><a href="#partnerss">Contact us</a></li>
+        </nav>
 
         <!-- Cinemagraph -->
-        <img src="img/storke-delivery.gif" alt="stork" class="cinemagraph">
+        <img src="img/STORKNSHIT.png" alt="Stork carrying a baby" class="cinemagraph">
 
         <!-- Gradient -->
-        <div class="gradient">
-        <h2 class="story">Our Story</h2>
-        <p class="story2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error optio velit voluptate, quo, temporibus soluta!</p>
-        <h2 class="mission">Our Mission</h2>
-        <p class="mission2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt odio, harum qui incidunt laboriosam.</p>
+        <div class="gradient" id="gradientt">
+            <h1 class="story">Our Story</h1>
+            <p class="story2">
+                We are five students whose goal is to make an environmental difference in today’s world through intuitive gift giving and receiving. Our background in business paired with our passion to positively influence environmental issues for generations to come is what drives our company.
+            </p>
+            <h1 class="mission" id="missionn">Our Mission</h1>
+            <p class="mission2">
+                Our mission is to positively impact the environment through gift giving. Furthermore, the impact of these planted trees will influence future generations to come. Upon receiving the gift, over the years, the child will grow with an understanding of the connection between them and the earth.
+            </p>
         </div>
 
         <!-- How it works -->
         <h1 class="how">How it works?</h1>
         <div class="howit">
-        <img src="img/step1.png" alt="step1" class="step1">
-        <p class="caption" id="caption1">The order is placed</p>
-        <img src="img/step2.png" alt="step2" class="step2">
-        <p class="caption" id="caption2">The order is placed</p>
-        <img src="img/step3.png" alt="step3" class="step3">
-        <p class="caption" id="caption3">The order is placed</p>
-        <img src="img/step4.png" alt="step4" class="step4">
-        <p class="caption" id="caption4">The order is placed</p>
+            <img src="img/step1.png" alt="Placing an order" class="step1">
+            <p class="caption" id="caption1">The order is placed!</p>
+            <img src="img/step2.png" alt="Stork holding baby" class="step2">
+            <p class="caption" id="caption2">The baby arrives!</p>
+            <img src="img/step3.png" alt="Wrapped gift" class="step3">
+            <p class="caption" id="caption3">The gift is delivered!</p>
+            <img src="img/step4.png" alt="A growing tree" class="step4">
+            <p class="caption" id="caption4">The tree is planted!</p>
         </div>
 
         <!-- Stats -->
-            <img src="img/trees.jpg" alt="trees_bg" class="statBG">
-            <p class="stat1">80 <br> babies born</p>
-            <p class="stat2">80 <br> babies born</p>
-            <p class="stat3">80 <br> babies born</p>
+        <img src="img/trees.jpg" alt="forest" class="statBG">
+        <p class="stat1">80 <br> <b>Babies born</b></p>
+        <p class="stat2">244 <br> <b>Trees planted</b></p>
+        <p class="stat3">1 <br> <b>Planets saved</b></p>
 
         <!-- MapBox -->
         <div id="buttons"><b>Where to buy | Where to plant</b></div>
@@ -60,16 +79,60 @@
 
         <!-- Our Team -->
         <h1 class="team">Our Team</h1>
-        <p  class="team2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi iste aspernatur cum sit provident.</p>
+        <div class="team2">
+            <img src="img/Moris.png" alt="Moris Vandevyver" id="t1" class="teampic">
+            <h3 id="t1h">Moris Vandevyver</h3>
+            <p class="titles" id="t1c">CEO</p>
+            <img src="img/Martin.png" alt="Martin Schaumburg" id="t2" class="teampic">
+            <h3 id="t2h">Martin Schaumburg</h3>
+            <p class="titles" id="t2c">Partnerships and Strategy </p>
+            <img src="img/vlad.png" alt="Vlad Szostak" id="t3" class="teampic">
+            <h3 id="t3h">Vlad Szostak</h3>
+            <p class="titles" id="t3c">Administration and Finance</p>
+            <img src="img/aleksander.png" alt="Aleksander Danceanu" id="t4" class="teampic">
+            <h3 id="t4h">Aleksander Danceanu</h3>
+            <p class="titles" id="t4c">Marketing and Communications</p>
+        </div>
 
         <!-- Our Partners -->
-        <h1 class="partners">Our Partners</h1>
+        <h1 class="partners" id="partnerss">Our Partners</h1>
         <div class="slideshow">
-        <div class="images">
-        </div>
+            <div class="images">
+            </div>
         </div>
 
         <!-- Contact -->
+
+        <h1 class="contactus">Contact us!</h1>
+        <div class="contactwrap">
+            <p class="contactfluff">Fill in the fields below and we will reach you :)</p>
+            <form class="form">
+                <p class="formstuff">Name</p><br>
+                <input type="text" name="fullname" class="input"> <br>
+                <p class="formstuff">E-mail</p><br>
+                <input type="text" name="email" class="input"> <br>
+                <p class="formstuff">Details</p><br>
+                <input type="text" name="details" class="input2">
+            </form>
+        </div>
+        <button class="butn">SEND</button>
+
+        <!-- Footer -->
+
+        <div id="footer">
+            <h3><b>BornGreen</b></h3>
+            <h5>E-mail</h5>
+            <p>infoborngreen@gmail.com</p>
+            <h5>Phone number</h5>
+            <p>
+                91 85 67 88</p>
+            <div class="footername">
+                <a href="https://www.facebook.com/BornGreen.dk/"><img src="img/fb.png" class="some" alt="Facebook logo"></a>
+                <a href="https://www.instagram.com/"><img src="img/ig.png" class="some" alt="Instagram logo"></a>
+                <a href="https://twitter.com/"><img src="img/twitter.png" class="some" alt="Twitter logo"></a>
+            </div>
+
+        </div>
 
 
     </div>
@@ -80,58 +143,74 @@
 
 
 
-            <script>
+    <script>
+
         mapboxgl.accessToken = 'pk.eyJ1Ijoia2FtaWxtaWxjIiwiYSI6ImNqdGd3a3A4dzBvc28zeXJ1OWQ3d2xzNnkifQ.P0LS7r_BHYy6wtPLfADikA';
         const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/kamilmilc/cjw4iijds054s1cpjuajwfstk',
-        center: [10.202566, 56.151413],
-        zoom: 11.6
+            container: 'map',
+            style: 'mapbox://styles/kamilmilc/cjw4iijds054s1cpjuajwfstk',
+            center: [10.202566, 56.151413],
+            zoom: 11.6
         });
 
 
         var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [10.200915, 56.152449]
-    },
-    properties: {
-      title: 'Musikhuset',
-      description: 'Aarhus, Denmark'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [10.197534, 56.137153]
-    },
-    properties: {
-      title: 'Tivoli',
-      description: 'Aarhus, Denmark'
-    }
-  }]
-};
+            type: 'FeatureCollection',
+            features: [{
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [10.200915, 56.152449]
+                    },
+                    properties: {
+                        title: 'Musikhuset',
+                        description: 'Aarhus, Denmark'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [10.197534, 56.137153]
+                    },
+                    properties: {
+                        title: 'Tivoli',
+                        description: 'Aarhus, Denmark'
+                    }
+                }
+            ]
+        };
 
-                // add markers to map
-geojson.features.forEach(function(marker) {
+        // add markers to map
+        geojson.features.forEach(function(marker) {
 
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-    .addTo(map);
-});
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({
+                        offset: 25
+                    }) // add popups
+                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                .addTo(map);
+        });
+
+        <!-- NAVIGATION MENU -->
+
+        let opened = false;
 
 
-        </script>
+        function openMenu() {
+            opened = !opened;
+            if (opened)
+                document.getElementById("navi").style.display = 'inline-block'
+            else
+                document.getElementById("navi").style.display = 'none'
+        }
+    </script>
 </body>
+
 </html>
